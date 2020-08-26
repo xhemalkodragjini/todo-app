@@ -40,20 +40,25 @@ class App extends Component {
   render() {
     return (
       <div className="app-container ">
+        <div>
+          <h2 className="logo">To Do App</h2>
+        </div>
         <SearchBar
           todo={this.state.todo}
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
         />
-        {this.state.todos.length > 0 ? (
-          <ToDoList
-            todos={this.state.todos}
-            handleDelete={this.handleDelete}
-            handleEdit={this.handleEdit}
-          />
-        ) : (
-          <div>No todos</div>
-        )}
+        <div className="content">
+          {this.state.todos.length > 0 ? (
+            <ToDoList
+              todos={this.state.todos}
+              handleDelete={this.handleDelete}
+              handleEdit={this.handleEdit}
+            />
+          ) : (
+            <div>No todos</div>
+          )}
+        </div>
       </div>
     );
   }

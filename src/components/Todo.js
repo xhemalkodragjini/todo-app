@@ -21,50 +21,54 @@ export default function Todo(props) {
 
   if (isEditable) {
     return (
-      <div className="todo-element row">
-        <div className="col-6">
-          <input
-            className="form-control"
-            type="text"
-            value={value}
-            onChange={handleChangeEdit}
-          />
-        </div>
-        <div className="col-3">
-          <button
-            className="btn btn-info btn-sm"
-            onClick={() => props.handleEdit(value, props.todo)}
-          >
-            Submit Edit
-          </button>
-        </div>
-        <div className="col-3">
-          <button className="btn btn-danger btn-sm" onClick={handleCancel}>
-            Cancel Edit
-          </button>
+      <div className="card">
+        <div className="card-body row">
+          <div className="col-6">
+            <input
+              className="form-control"
+              type="text"
+              value={value}
+              onChange={handleChangeEdit}
+            />
+          </div>
+          <div className="col-3">
+            <button
+              className="btn btn-info btn-sm"
+              onClick={() => props.handleEdit(value, props.todo)}
+            >
+              Submit
+            </button>
+          </div>
+          <div className="col-3">
+            <button className="btn btn-danger btn-sm" onClick={handleCancel}>
+              Cancel
+            </button>
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="todo-element row">
-      <div className="col-6">
-        <h3>{props.todo}</h3>
+    <div className="card">
+      <div className="card-body row">
+        <div className="col-6">
+          <h3>{props.todo}</h3>
+        </div>
+        <div className="col-3">
+          <button className="btn btn-info btn-sm" onClick={handleEditable}>
+            Edit
+          </button>
+        </div>
+        <div className="col-3">
+          <button
+            className="btn btn-danger btn-sm"
+            onClick={() => props.handleDelete(props.todo)}
+          >
+            Delete
+          </button>
+        </div>
       </div>
-      <div className="col-3">
-        <button className="btn btn-info btn-sm" onClick={handleEditable}>
-          Edit
-        </button>
-      </div>
-      <div className="col-3">
-        <button
-          className="btn btn-danger btn-sm"
-          onClick={() => props.handleDelete(props.todo)}
-        >
-          Delete
-        </button>
-      </div>{" "}
     </div>
   );
 }

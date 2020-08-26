@@ -1,12 +1,12 @@
-.todo-element {
-  background-color: white;
-  margin-bottom: 10px;
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09) !important;
 }
 
-.col-3 {
-  padding: 10px 0;
+.card .form-control {
+  max-width: 180px;
 }
 
-.col-6 {
-  padding: 10px 0;
+.card h3 {
+  font-size: 20px;
 }

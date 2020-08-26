@@ -3,3 +3,17 @@
   margin: 30px auto 0 auto;
   text-align: center !important;
 }
+body {
+  background-color: rgb(228, 228, 214);
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+  font-family: "Lobster", cursive;
+  margin-bottom: 30px;
+}
+
+.content {
+  margin-top: 40px;
+  min-height: 50px;
+}
