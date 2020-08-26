@@ -1,7 +1,6 @@
 import React from "react";
 import "./ToDoList.css";
 import Todo from "./Todo";
-import PropTypes from "prop-types";
 
 function ToDoList(props) {
   return (
